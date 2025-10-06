@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="previous-operand" id="previous"></div>
+            <div class="current-operand" id="current">0</div>
+        </div>
+        
+        <div class="buttons">
+            <!-- Primera fila -->
+            <button class="btn function" onclick="calc.clear()">C</button>
+            <button class="btn function" onclick="calc.delete()">DEL</button>
+            <button class="btn function" onclick="calc.appendNumber('(')">(</button>
+            <button class="btn function" onclick="calc.appendNumber(')')">)</button>
+            
+            <!-- Segunda fila -->
+            <button class="btn scientific" onclick="calc.scientific('sin')">sin</button>
+            <button class="btn scientific" onclick="calc.scientific('cos')">cos</button>
+            <button class="btn scientific" onclick="calc.scientific('tan')">tan</button>
+            <button class="btn operator" onclick="calc.chooseOperation('/')">÷</button>
+            
+            <!-- Tercera fila -->
+            <button class="btn scientific" onclick="calc.scientific('log')">log</button>
+            <button class="btn number" onclick="calc.appendNumber('7')">7</button>
+            <button class="btn number" onclick="calc.appendNumber('8')">8</button>
+            <button class="btn number" onclick="calc.appendNumber('9')">9</button>
+            
+            <!-- Cuarta fila -->
+            <button class="btn scientific" onclick="calc.scientific('ln')">ln</button>
+            <button class="btn number" onclick="calc.appendNumber('4')">4</button>
+            <button class="btn number" onclick="calc.appendNumber('5')">5</button>
+            <button class="btn number" onclick="calc.appendNumber('6')">6</button>
+            
+            <!-- Quinta fila -->
+            <button class="btn scientific" onclick="calc.scientific('sqrt')">√</button>
+            <button class="btn number" onclick="calc.appendNumber('1')">1</button>
+            <button class="btn number" onclick="calc.appendNumber('2')">2</button>
+            <button class="btn number" onclick="calc.appendNumber('3')">3</button>
+            
+            <!-- Sexta fila -->
+            <button class="btn scientific" onclick="calc.scientific('pow')">x²</button>
+            <button class="btn number" onclick="calc.appendNumber('0')">0</button>
+            <button class="btn number" onclick="calc.appendNumber('.')">.</button>
+            <button class="btn operator" onclick="calc.chooseOperation('+')">+</button>
+            
+            <!-- Séptima fila -->
+            <button class="btn scientific" onclick="calc.appendNumber('Math.PI')">π</button>
+            <button class="btn scientific" onclick="calc.appendNumber('Math.E')">e</button>
+            <button class="btn operator" onclick="calc.chooseOperation('-')">-</button>
+            <button class="btn operator" onclick="calc.chooseOperation('*')">×</button>
+            
+            <!-- Octava fila -->
+            <button class="btn equals" onclick="calc.compute()">=</button>
+        </div>
+    </div>
+    
+    <script src="js.js"></script>
+</body>
+</html>
